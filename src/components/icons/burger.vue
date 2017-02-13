@@ -1,3 +1,14 @@
+<script>
+export default {
+  props: {
+    open: {
+      type: [Boolean, String],
+      default() { return false }
+    }
+  }
+}
+</script>
+
 <template>
   <svg width="20px" :class="{ 'menu-icon': true, open}" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
       <title>Menu</title>
@@ -22,9 +33,3 @@
   .open .bottom { transform: rotate(-45deg) translate(-10.25px, -0.75px); }
   .open .middle { opacity: 0; }
 </style>
-
-<script>
-export default {
-  props: ['open']
-}
-</script>

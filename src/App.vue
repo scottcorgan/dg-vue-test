@@ -1,10 +1,27 @@
+<script>
+import Header from './components/Header.vue'
+import secretMenu from './components/secret-menu.vue'
+
+export default {
+  name: 'app',
+  components: {
+    'app-header': Header,
+    'app-secret-menu': secretMenu
+  },
+  computed: {
+    isMenuOpen() {
+      return this.$store.state.isSecretMenuOpen
+    }
+  }
+}
+</script>
+
 <template>
   <div id="app">
-    <div :class="{'main-content': true, 'with-menu': isMenuOpen}">
-      <dg-header />
-      <random-stuff />
-    </div>
-    <dg-secret-menu />
+    <main :class="{'main-content': true, 'with-menu': isMenuOpen}">
+      <app-header />
+    </main>
+    <app-secret-menu />
   </div>
 </template>
 
@@ -37,31 +54,16 @@ ul, li {
   padding:0;
 }
 
+#app {
+  height: 100%;
+}
+
 .main-content {
   background-color: #fff;
+  height: 100%;
   transition: transform 0.2s ease-in-out;
 }
 .main-content.with-menu {
   transform: translateX(-330px);
 }
 </style>
-
-<script>
-import Header from './components/Header.vue'
-import secretMenu from './components/secret-menu.vue'
-import randomStuff from './components/random-stuff.vue'
-
-export default {
-  name: 'app',
-  components: {
-    'dg-header': Header,
-    'dg-secret-menu': secretMenu,
-    'random-stuff': randomStuff
-  },
-  computed: {
-    isMenuOpen() {
-      return this.$store.state.isSecretMenuOpen
-    }
-  }
-}
-</script>

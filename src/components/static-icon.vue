@@ -4,6 +4,8 @@ import chevronUp from './icons/chevron-up.vue'
 import chevronDown from './icons/chevron-down.vue'
 import burger from './icons/burger.vue'
 
+// TODO: create a custom bruger icon with animation, etc.
+
 export default {
   props: ['type', 'open'],
   components: {

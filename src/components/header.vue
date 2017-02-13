@@ -1,3 +1,26 @@
+<script>
+import logo from './logo.vue'
+import staticIcon from './static-icon.vue'
+import * as types from '../store/types'
+
+export default {
+  components: {
+    logo,
+    'static-icon': staticIcon
+  },
+  computed: {
+    isMenuOpen() {
+      return this.$store.state.isSecretMenuOpen
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.$store.commit(types.TOGGLE_SECRET_MENU)
+    }
+  }
+}
+</script>
+
 <template>
   <header>
     <div class="logo"><logo /></div>
@@ -6,15 +29,15 @@
         <li>Articles</li>
         <li>Sermons</li>
         <li>Books</li>
-        <li>Features <icon type="chevron-down" /></li>
+        <li>Features <static-icon type="chevron-down" /></li>
         <li>Donate</li>
       </ul>
     </nav>
     <div class="search">
-      <icon type="search" />
+      <static-icon type="search" />
     </div>
     <div class="burger" @click="toggleMenu()">
-      <icon type="burger" :open="isMenuOpen" />
+      <static-icon type="burger" :open="isMenuOpen" />
     </div>
   </header>
 </template>
@@ -59,26 +82,3 @@ svg {
   margin: 0 24px 0 16px;
 }
 </style>
-
-<script>
-import logo from './logo.vue'
-import icon from './icon.vue'
-import * as types from '../store/types'
-
-export default {
-  components: {
-    logo,
-    icon
-  },
-  computed: {
-    isMenuOpen() {
-      return this.$store.state.isSecretMenuOpen
-    }
-  },
-  methods: {
-    toggleMenu() {
-      this.$store.commit(types.TOGGLE_SECRET_MENU)
-    }
-  }
-}
-</script>
