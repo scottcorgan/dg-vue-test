@@ -1,0 +1,88 @@
+{
+  "name": "scottcorgan/dg-vue-test",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Testing",
+  "branch": "",
+  "style": {
+    "name": "Swiss",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/SwissHeader",
+      "article": "article/SwissArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    "heading": {
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em"
+    },
+    "layout": {
+      "fluid": true
+    },
+    "colors": {
+      "text": "#000",
+      "background": "#fff",
+      "primary": "#05a",
+      "secondary": "#444",
+      "highlight": "#f30",
+      "border": "#ccc",
+      "muted": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/scottcorgan/dg-vue-test",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/dg-vue-test",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "dg-vue-test",
+      "subhead": "A Vue.js project",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "dg-vue-test: A Vue.js project",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "scottcorgan",
+          "repo": "dg-vue-test"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<blockquote>\n<p>Generated with <a href=\"https://github.com/vuejs/vue-cli\">vue-cli</a></p>\n</blockquote>\n<h2>Running Locally</h2>\n<pre><span class=\"hljs-comment\"># install dependencies</span>\nnpm install\n\n<span class=\"hljs-comment\"># serve with hot reload at localhost:8080</span>\nnpm run dev</pre><p>For detailed explanation on how things work, checkout the <a href=\"http://vuejs-templates.github.io/webpack/\">guide</a> and <a href=\"http://vuejs.github.io/vue-loader\">docs for vue-loader</a>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/scottcorgan/dg-vue-test",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/scottcorgan",
+          "text": "scottcorgan"
+        }
+      ]
+    }
+  ]
+}
